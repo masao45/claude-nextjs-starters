@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Toaster } from "@/components/ui/sonner";
+import { ServiceWorkerRegister } from "@/components/sw-register";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,6 +20,15 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Next Starter",
   description: "Next.js + Tailwind + shadcn 보일러플레이트",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "Next Starter",
+  },
+};
+
+export const viewport = {
+  themeColor: "#18181b",
 };
 
 export default function RootLayout({ children }) {
@@ -39,6 +49,7 @@ export default function RootLayout({ children }) {
           <main className="flex-1">{children}</main>
           <Footer />
           <Toaster />
+          <ServiceWorkerRegister />
         </ThemeProvider>
       </body>
     </html>

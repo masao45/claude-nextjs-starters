@@ -10,11 +10,11 @@ export default function Home() {
         Next.js 보일러플레이트
       </h1>
       <p className="max-w-md text-muted-foreground">
-        Tailwind CSS, shadcn UI, 상태관리, 폼 검증, 다크모드가 준비된 스타터킷입니다.
+        Tailwind CSS, shadcn UI, 상태관리, 폼 검증, 다크모드, 실전 예제가 준비된 스타터킷입니다.
       </p>
       <div className="flex gap-3">
-        <Button nativeButton={false} render={<Link href="/dashboard" />}>
-          대시보드로 가기
+        <Button nativeButton={false} render={<Link href="/examples" />}>
+          예제 보러가기
         </Button>
         <Button
           variant="outline"

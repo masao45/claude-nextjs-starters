@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
@@ -39,7 +40,7 @@ export default function LoginPage() {
     try {
       await login(values)
       toast.success("로그인되었습니다.")
-      router.push("/dashboard")
+      router.push("/examples/data-fetching")
     } catch {
       setServerError("로그인에 실패했습니다. 다시 시도해주세요.")
     }
@@ -91,6 +92,12 @@ export default function LoginPage() {
               </Button>
             </FieldGroup>
           </form>
+          <p className="mt-4 text-center text-sm text-muted-foreground">
+            계정이 없으신가요?{" "}
+            <Link href="/signup" className="underline underline-offset-4">
+              회원가입
+            </Link>
+          </p>
         </CardContent>
       </Card>
     </Container>

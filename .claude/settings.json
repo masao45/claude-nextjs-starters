@@ -1,0 +1,21 @@
+{
+  
+  "permissions": {
+    "allow": [
+      "Read(./README.md)"
+    ],
+    "ask": ["Bash(git push *)", "Write(./src/**)"],
+    "deny": [
+      "Bash(curl *)",
+      "Bash(rm *)",
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Read(./secrets/**)",
+      "Write(./config/prod.*)",
+      "Bash(rm -rf *)",
+      "Bash(git push --force *)"
+    ],
+    "defaultMode": "plan"
+  },
+  "outputStyle": "Explanatory"
+}
