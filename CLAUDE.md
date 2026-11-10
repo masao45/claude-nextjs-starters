@@ -36,6 +36,7 @@ npm run lint    # ESLint (eslint-config-next core-web-vitals)
 
 - 전역 상태: `persist` 미들웨어(localStorage)를 사용하는 zustand — `store/use-auth-store.js`(목업 인증, 실제 백엔드 없음), `store/use-settings-store.js`.
 - 폼: react-hook-form + zod, 스키마는 `lib/validations/` 아래에 있습니다. 폼 하나당 스키마 파일 하나(`login.js`, `signup.js`, `settings.js`, `profile-form.js`).
+- 유틸리티 훅: `usehooks-ts`(`useLocalStorage`, `useDebounceValue`, `useToggle`, `useCopyToClipboard`, `useMediaQuery` 등) — 사용 예시는 `app/examples/hooks/page.js` 참고. `useLocalStorage`는 SSR 하이드레이션 불일치를 피하기 위해 `{ initializeWithValue: false }` 옵션을 함께 사용합니다.
 
 ### `/examples`는 살아있는 레퍼런스 섹션입니다
 
